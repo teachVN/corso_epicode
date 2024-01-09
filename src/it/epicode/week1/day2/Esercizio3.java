@@ -17,7 +17,7 @@ public class Esercizio3 {
                 for(int i=0; i<parola.length(); i++){
                     System.out.print(parola.charAt(i));
 
-
+                    System.out.println();
                     if(i!=parola.length()-1)
                         System.out.print(",");
 
