@@ -48,4 +48,47 @@ public class Automobile {
                 ", porte: " + porte + ", targa: " + targa + ", categoria: " + categoria);
     }
 
+    public String getMarca(){
+        return marca;
+    }
+
+    public String getTarga(){
+        return targa;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+
+    public int getCilindrata(){
+        return cilindrata;
+    }
+
+    public int getPorte(){
+        return porte;
+    }
+
+    public void setCategoria(TipoAutomobile categoria) {
+        this.categoria = categoria;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setCilindrata(int cilindrata) {
+        this.cilindrata = cilindrata;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPorte(int porte) {
+        this.porte = porte;
+    }
+
+    public void setTarga(String targa) {
+        this.targa = targa;
+    }
 }
