@@ -12,6 +12,7 @@ public class Sim {
         this.numero=numero;
         this.costoAlSecondo=costoAlSecondo;
         chiamate = new String[5];
+        chiamateDisponibili=chiamate.length;
     }
 
     public double getCostoAlSecondo() {
@@ -36,6 +37,11 @@ public class Sim {
 
     public void stampaDatiSim(){
         System.out.println("Numero: " + numero + ", costo al secondo: " + costoAlSecondo + ", credito: " + credito);
+
+        System.out.println("Ultime 5 chiamate effettuate:");
+        for (int i = 0; i < chiamate.length; i++) {
+            System.out.println(chiamate[i]);
+        }
     }
 
     public boolean telefonata(String numero, int secondi){
@@ -51,12 +57,27 @@ public class Sim {
 
             if(chiamateDisponibili>0){
                 chiamate[5-chiamateDisponibili]=datiChiamata;
+                chiamateDisponibili--;
             }
             else{
-
+                shiftArray(datiChiamata);
             }
+
+            return true;
 
         }
 
     }
+
+    private void shiftArray(String datiChiamata){
+        int i;
+
+        for(i=0; i<chiamate.length-1; i++){
+            chiamate[i]=chiamate[i+1];
+        }
+
+        chiamate[i]=datiChiamata;
+
+    }
+
 }
