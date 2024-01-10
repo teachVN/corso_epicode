@@ -91,4 +91,14 @@ public class Automobile {
     public void setTarga(String targa) {
         this.targa = targa;
     }
+
+    public static boolean confrontaTarghe(Automobile a1, Automobile a2){
+        if(a1!=null && a2!=null) {
+            if (a1.getTarga().equals(a2.getTarga())) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

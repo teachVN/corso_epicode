@@ -1,5 +1,7 @@
 package it.epicode.week1.day3;
 
+import it.epicode.week1.day3.Automobile;
+
 public class UsaAutomobile {
 
     public static void main(String[] args) {
@@ -14,15 +16,28 @@ public class UsaAutomobile {
 
        // auto.=TipoAutomobile.SUV;
 
+        //auto.cilindrata=900;
+
+
+
         auto.stampaCaratteristiche();
+
+        auto.setMarca("Ford");
+        auto.setNome("Kuga");
+
+        System.out.println(auto.getMarca());
+        System.out.println(auto.getNome());
 
         auto.accelera();
 
         auto.decelera();
 
-        Automobile auto2 = new Automobile("Fiat", "500", "AZ3432", 1500, 5);
+        Automobile auto2 = new Automobile("Fiat", "500", "AZ3433", 1500, 5);
 
         auto2.stampaCaratteristiche();
+
+        System.out.println(Automobile.confrontaTarghe(auto, null));
+
 
         Automobile auto3 = auto;
 
@@ -39,6 +54,8 @@ public class UsaAutomobile {
         System.out.println(auto.equals(auto2));
 
         System.out.println(auto.equals(auto3));
+
+
 
 
     }
