@@ -11,8 +11,8 @@ public class ContrattoMobile extends ContrattoTelefonico {
         this.COSTO_ALLA_RISPOSTA=COSTO_ALLA_RISPOSTA;
     }
 
-
-    public void aggionraBolletta(int secondi){
+    @Override
+    public void aggiornaBolletta(int secondi){
         super.aggiornaBolletta(secondi);
         aggiungiCosti(COSTO_ALLA_RISPOSTA);
 
