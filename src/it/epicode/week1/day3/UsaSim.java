@@ -10,9 +10,13 @@ public class UsaSim {
         System.out.println(sim.telefonata("879879", 30));
         System.out.println(sim.telefonata("87934534", 60));
         System.out.println(sim.telefonata("873232322", 30));
+        sim.stampaDatiSim();
+
         System.out.println(sim.telefonata("87934534", 30));
         System.out.println(sim.telefonata("87934534", 10));
         System.out.println(sim.telefonata("87934534", 10));
+        System.out.println(sim.telefonata("45879856", 20));
+        System.out.println(sim.telefonata("878657654", 20));
 
         sim.stampaDatiSim();
     }
