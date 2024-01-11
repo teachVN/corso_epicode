@@ -44,5 +44,26 @@ public class ContrattoTelefonico {
         costoTelefonate+=costo;
     }
 
+    public boolean stessoCostoAlSecondo(ContrattoTelefonico ct){
+        if(ct instanceof ContrattoMobile){
+            ContrattoMobile cm = (ContrattoMobile)ct;
+            System.out.println(cm.getCOSTO_ALLA_RISPOSTA());
+        }
 
+        if(ct.getCOSTO_AL_SECONDO()==this.COSTO_AL_SECONDO){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "ContrattoTelefonico{" +
+                "numeroTel=" + numeroTel +
+                ", utente='" + utente + '\'' +
+                ", costoTelefonate=" + costoTelefonate +
+                ", numeroTelefonate=" + numeroTelefonate +
+                ", COSTO_AL_SECONDO=" + COSTO_AL_SECONDO +
+                '}';
+    }
 }

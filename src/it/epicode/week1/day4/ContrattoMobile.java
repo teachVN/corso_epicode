@@ -18,4 +18,7 @@ public class ContrattoMobile extends ContrattoTelefonico {
 
     }
 
+    public double getCOSTO_ALLA_RISPOSTA() {
+        return COSTO_ALLA_RISPOSTA;
+    }
 }
