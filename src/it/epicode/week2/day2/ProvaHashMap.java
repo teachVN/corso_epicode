@@ -22,10 +22,16 @@ public class ProvaHashMap {
 
         System.out.println(a);
 
+
+
         Set<Integer> chiavi = inventario.keySet();
 
         for(Integer c:chiavi){
-            System.out.println(inventario.get(c));
+            Articolo articolo = inventario.get(c);
+
+            if(articolo.equals(a3)){
+                System.out.println(c);
+            }
         }
 
 
