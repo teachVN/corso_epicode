@@ -1,5 +1,7 @@
 package it.epicode.week2.day2;
 
+import java.util.Objects;
+
 public class Articolo {
 
     private String titolo;
@@ -43,5 +45,18 @@ public class Articolo {
                 ", categoria='" + categoria + '\'' +
                 ", prezzo=" + prezzo +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Articolo articolo = (Articolo) o;
+        return Double.compare(prezzo, articolo.prezzo) == 0 && Objects.equals(titolo, articolo.titolo) && Objects.equals(categoria, articolo.categoria);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(titolo, categoria, prezzo);
     }
 }
