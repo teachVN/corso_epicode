@@ -1,5 +1,7 @@
 package it.epicode.week2.day3;
 
+import java.util.List;
+
 public class UsaLambda {
 
     public static void main(String[] args) {
@@ -15,6 +17,15 @@ public class UsaLambda {
 
         System.out.println(c.area(5));
 
+        List<Double> lista = List.of(2.3,5.5,7.2,9.0,10.1,22.2);
+
+        SommaLista sommaLista = l -> { double somma=0;
+                                        for(Double d:l){
+                                            somma+=d;
+                                        }
+                                        return somma;};
+
+        System.out.println(sommaLista.sommaLista(lista));
 
     }
 }
