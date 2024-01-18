@@ -75,6 +75,10 @@ public class ProvaSteam2 {
 
         System.out.println(prodotti.stream().mapToDouble(Product::getPrice).max().getAsDouble());
 
+       Map<String, List<Product>> map4 = prodotti.stream().collect(Collectors.groupingBy(Product::getCategory));
+
+        System.out.println(map4);
+
 
 
     }
